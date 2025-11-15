@@ -110,10 +110,15 @@ public class ItemListScreen {
             searchField = new TextFieldWidget(client.textRenderer, panelX + 10, searchBarY, panelWidth - 90, 16, Text.literal("Search"));
             searchField.setMaxLength(100);
             searchField.setText(searchQuery);
+            searchField.setPlaceholder(Text.literal("Search items..."));
+            searchField.setEditable(true);
+            searchField.setFocusUnlocked(true);
+            searchField.setDrawsBackground(true);
             searchField.setChangedListener(text -> {
                 searchQuery = text;
                 currentPage = 0;
                 updateFilteredItems();
+                ItemList.LOGGER.info("Search query changed to: '{}'", text);
             });
         } else {
             searchField.setX(panelX + 10);
@@ -121,9 +126,10 @@ public class ItemListScreen {
             searchField.setWidth(panelWidth - 90);
         }
 
-        // Draw search bar background
-        context.fill(panelX, searchBarY - 2, panelX + panelWidth, searchBarY + 18, 0xC0000000);
-        context.drawBorder(panelX, searchBarY - 2, panelWidth, 20, 0xFF8B8B8B);
+        // Draw search bar background with focus indicator
+        int searchBgColor = searchField != null && searchField.isFocused() ? 0xC0003300 : 0xC0000000;
+        context.fill(panelX, searchBarY - 2, panelX + panelWidth, searchBarY + 18, searchBgColor);
+        context.drawBorder(panelX, searchBarY - 2, panelWidth, 20, searchField != null && searchField.isFocused() ? 0xFF00FF00 : 0xFF8B8B8B);
 
         searchField.render(context, mouseX, mouseY, delta);
 
@@ -165,8 +171,8 @@ public class ItemListScreen {
             renderItemDetailsOverlay(context, client, selectedItem, screenWidth, screenHeight);
         }
 
-        // Render hover tooltip last (on top of everything), but only if no item is selected
-        if (hoveredItem != null && selectedItem == null) {
+        // Render hover tooltip last (on top of everything) - ALWAYS show when hovering
+        if (hoveredItem != null) {
             renderHoverTooltip(context, client, hoveredItem, mouseX, mouseY);
         }
     }
@@ -252,31 +258,40 @@ public class ItemListScreen {
                         ItemStack ingredientStack = pattern[row][col].toItemStack();
                         context.drawItem(ingredientStack, slotX, slotY);
 
-                        // Draw count if > 1
-                        if (pattern[row][col].getCount() > 1) {
-                            String countText = String.valueOf(pattern[row][col].getCount());
-                            context.drawText(client.textRenderer, Text.literal(countText),
-                                    slotX + 17 - client.textRenderer.getWidth(countText),
-                                    slotY + 9, 0xFFFFFF, true);
-                        }
-
                         // Highlight if it's a custom item (clickable)
                         if (pattern[row][col].isCustomItem()) {
                             // Draw subtle blue border to indicate it's clickable
                             context.drawBorder(slotX, slotY, 16, 16, 0x8800AAFF);
+                        }
+
+                        // Draw count if > 1 (AFTER the item so it's on top)
+                        if (pattern[row][col].getCount() > 1) {
+                            String countText = String.valueOf(pattern[row][col].getCount());
+                            // Draw with shadow for better visibility
+                            context.drawText(client.textRenderer, Text.literal(countText),
+                                    slotX + 17 - client.textRenderer.getWidth(countText),
+                                    slotY + 9, 0xFFFFFF, true);
                         }
                     }
                 }
             }
         }
 
-        // Draw result arrow and slot
-        int arrowX = gridX + gridSize + 8;
-        int arrowY = gridY + 18;
-        context.drawText(client.textRenderer, Text.literal("=>"), arrowX, arrowY, 0xFFFFFF, false);
+        // Draw crafting table between the grid and result
+        int craftingTableX = gridX + gridSize + 12;
+        int craftingTableY = gridY + 19; // Center vertically with the grid
 
-        int resultX = arrowX + 20;
-        int resultY = gridY + 18;
+        // Draw crafting table slot
+        context.fill(craftingTableX, craftingTableY, craftingTableX + 16, craftingTableY + 16, 0xFF3F3F3F);
+        context.drawBorder(craftingTableX, craftingTableY, 16, 16, 0xFF8B8B8B);
+
+        // Draw crafting table item
+        ItemStack craftingTableStack = new ItemStack(net.minecraft.item.Items.CRAFTING_TABLE);
+        context.drawItem(craftingTableStack, craftingTableX, craftingTableY);
+
+        // Draw result slot to the right of crafting table
+        int resultX = craftingTableX + 24;
+        int resultY = craftingTableY;
         context.fill(resultX, resultY, resultX + 16, resultY + 16, 0xFF3F3F3F);
         context.drawBorder(resultX, resultY, 16, 16, 0xFFFFAA00);
 
@@ -284,7 +299,7 @@ public class ItemListScreen {
         ItemStack resultStack = item.toItemStack();
         context.drawItem(resultStack, resultX, resultY);
 
-        contentY = gridY + gridSize + 10;
+        contentY = gridY + gridSize + 16;
 
         // Draw "How to Obtain" section
         context.drawText(client.textRenderer, Text.literal("How to Obtain:"), contentX, contentY, 0xFFFFAA00, true);
@@ -344,8 +359,31 @@ public class ItemListScreen {
         int panelX = screenWidth - panelWidth - 5;
         int panelY = (screenHeight - panelHeight - 25) / 2;
 
-        // Check page navigation buttons
+        // Calculate search bar position
         int searchBarY = panelY + panelHeight + 5;
+        int searchBarX = panelX + 10;
+        int searchBarWidth = panelWidth - 90;
+
+        // Check if clicked on search bar area - prioritize this!
+        if (mouseX >= searchBarX && mouseX < searchBarX + searchBarWidth &&
+                mouseY >= searchBarY && mouseY < searchBarY + 16) {
+            if (searchField != null) {
+                searchField.setFocused(true);
+                searchField.mouseClicked(mouseX, mouseY, button);
+                ItemList.LOGGER.info("Search field clicked and focused");
+                return true;
+            }
+        }
+
+        // Unfocus search field if clicked elsewhere
+        if (searchField != null && searchField.isFocused()) {
+            boolean clickedOnSearch = searchField.mouseClicked(mouseX, mouseY, button);
+            if (!clickedOnSearch) {
+                searchField.setFocused(false);
+            }
+        }
+
+        // Check page navigation buttons
         int buttonY = searchBarY;
         int buttonWidth = 15;
         int buttonHeight = 16;
@@ -372,11 +410,6 @@ public class ItemListScreen {
                 currentPage++;
                 return true;
             }
-        }
-
-        // Handle search field click
-        if (searchField != null && searchField.mouseClicked(mouseX, mouseY, button)) {
-            return true;
         }
 
         int gridX = panelX + 10;
@@ -459,9 +492,16 @@ public class ItemListScreen {
             return false;
         }
 
-        // Handle search field input first (highest priority)
-        if (searchField != null) {
+        // Handle search field input FIRST with highest priority
+        if (searchField != null && searchField.isFocused()) {
+            // Let the search field handle the key input
             if (searchField.keyPressed(keyCode, scanCode, modifiers)) {
+                return true;
+            }
+
+            // Handle text input manually for letters, numbers, and special characters
+            if (keyCode != GLFW.GLFW_KEY_ESCAPE && keyCode != GLFW.GLFW_KEY_TAB) {
+                // Allow all printable characters to pass through
                 return true;
             }
         }
@@ -486,6 +526,21 @@ public class ItemListScreen {
                     return true;
                 }
             }
+        }
+
+        return false;
+    }
+
+    public static boolean charTyped(char chr, int modifiers) {
+        if (!isVisible) {
+            return false;
+        }
+
+        // Allow search field to receive character input when focused
+        if (searchField != null && searchField.isFocused()) {
+            boolean handled = searchField.charTyped(chr, modifiers);
+            ItemList.LOGGER.info("Character typed: '{}', handled: {}", chr, handled);
+            return handled;
         }
 
         return false;
