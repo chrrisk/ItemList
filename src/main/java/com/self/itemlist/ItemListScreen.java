@@ -168,7 +168,7 @@ public class ItemListScreen {
 
         // Render clicked item details overlay on the left
         if (selectedItem != null) {
-            renderItemDetailsOverlay(context, client, selectedItem, screenWidth, screenHeight);
+            renderItemDetailsOverlay(context, client, selectedItem, screenWidth, screenHeight, mouseX, mouseY);
         }
 
         // Render hover tooltip last (on top of everything) - ALWAYS show when hovering
@@ -178,23 +178,11 @@ public class ItemListScreen {
     }
 
     private static void renderHoverTooltip(DrawContext context, MinecraftClient client, CustomItem item, int mouseX, int mouseY) {
-        List<Text> tooltip = new ArrayList<>();
-
-        // Add item name
-        tooltip.add(Text.literal(item.getName()));
-
-        // Add description if available
-        if (!item.getDescription().isEmpty()) {
-            tooltip.add(Text.literal(""));
-            List<Text> wrappedDesc = wrapText(client, item.getDescription(), 200);
-            tooltip.addAll(wrappedDesc);
-        }
-
-        // Render tooltip
+        List<Text> tooltip = buildCustomItemTooltip(client, item);
         context.drawTooltip(client.textRenderer, tooltip, mouseX, mouseY);
     }
 
-    private static void renderItemDetailsOverlay(DrawContext context, MinecraftClient client, CustomItem item, int screenWidth, int screenHeight) {
+    private static void renderItemDetailsOverlay(DrawContext context, MinecraftClient client, CustomItem item, int screenWidth, int screenHeight, int mouseX, int mouseY) {
         HandledScreen<?> handledScreen = (HandledScreen<?>) client.currentScreen;
 
         // Get inventory position
@@ -230,6 +218,9 @@ public class ItemListScreen {
         int gridSize = 54; // 3x3 grid with 18px slots
         int gridX = contentX + (overlayWidth - 16 - gridSize) / 2;
         int gridY = contentY;
+
+        ItemStack hoveredRecipeStack = ItemStack.EMPTY;
+        List<Text> hoveredRecipeTooltip = null;
 
         // Store grid position for click detection
         recipeGridX = gridX;
@@ -268,9 +259,24 @@ public class ItemListScreen {
                         if (pattern[row][col].getCount() > 1) {
                             String countText = String.valueOf(pattern[row][col].getCount());
                             // Draw with shadow for better visibility
+                            context.getMatrices().push();
+                            context.getMatrices().translate(0, 0, 200);
                             context.drawText(client.textRenderer, Text.literal(countText),
                                     slotX + 17 - client.textRenderer.getWidth(countText),
                                     slotY + 9, 0xFFFFFF, true);
+                            context.getMatrices().pop();
+                        }
+
+                        boolean slotHovered = mouseX >= slotX && mouseX < slotX + 16 && mouseY >= slotY && mouseY < slotY + 16;
+                        if (slotHovered) {
+                            hoveredRecipeStack = ingredientStack;
+                            hoveredRecipeTooltip = null;
+                            if (pattern[row][col].isCustomItem()) {
+                                CustomItem customIngredient = ItemRegistry.getItemById(pattern[row][col].getMaterial());
+                                if (customIngredient != null) {
+                                    hoveredRecipeTooltip = buildCustomItemTooltip(client, customIngredient);
+                                }
+                            }
                         }
                     }
                 }
@@ -298,6 +304,11 @@ public class ItemListScreen {
         // Draw result item
         ItemStack resultStack = item.toItemStack();
         context.drawItem(resultStack, resultX, resultY);
+        boolean resultHovered = mouseX >= resultX && mouseX < resultX + 16 && mouseY >= resultY && mouseY < resultY + 16;
+        if (resultHovered) {
+            hoveredRecipeStack = resultStack;
+            hoveredRecipeTooltip = buildCustomItemTooltip(client, item);
+        }
 
         contentY = gridY + gridSize + 16;
 
@@ -319,6 +330,31 @@ public class ItemListScreen {
         // Add close instruction
         contentY = overlayY + overlayHeight - 15;
         context.drawText(client.textRenderer, Text.literal("Click again to close"), contentX, contentY, 0x888888, false);
+
+        if (hoveredRecipeTooltip != null && !hoveredRecipeTooltip.isEmpty()) {
+            context.drawTooltip(client.textRenderer, hoveredRecipeTooltip, mouseX, mouseY);
+        } else if (!hoveredRecipeStack.isEmpty()) {
+            context.drawItemTooltip(client.textRenderer, hoveredRecipeStack, mouseX, mouseY);
+        }
+    }
+
+    private static List<Text> buildCustomItemTooltip(MinecraftClient client, CustomItem item) {
+        List<Text> tooltip = new ArrayList<>();
+        tooltip.add(Text.literal(item.getName()));
+
+        if (!item.getDescription().isEmpty()) {
+            tooltip.add(Text.literal(""));
+            tooltip.addAll(wrapText(client, item.getDescription(), 200));
+        }
+
+        if (!item.getLore().isEmpty()) {
+            tooltip.add(Text.literal(""));
+            for (String loreLine : item.getLore()) {
+                tooltip.add(Text.literal(loreLine));
+            }
+        }
+
+        return tooltip;
     }
 
     private static List<Text> wrapText(MinecraftClient client, String text, int maxWidth) {

@@ -4,7 +4,8 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin",
-        "HandledScreenMixin"
+        "HandledScreenMixin",
+        "KeyboardMixin"
     ],
 	"injectors": {
 		"defaultRequire": 1
