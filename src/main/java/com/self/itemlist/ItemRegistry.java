@@ -67,34 +67,18 @@ public class ItemRegistry {
     private static void createDefaultItemsFile(File file) throws IOException {
         JsonArray items = new JsonArray();
 
-        // Create example items with proper structure and recipes
+        items.add(buildEnchantedDiamondJson());
+        items.add(buildEnchantedStickJson());
+        items.add(buildEnchantedDiamondSwordJson());
 
-        // Item 1: Enchanted Sword
-        JsonObject item1 = new JsonObject();
-        item1.addProperty("id", "enchanted_sword");
-        item1.addProperty("name", "§bEnchanted Diamond Sword");
-        item1.addProperty("material", "minecraft:diamond_sword");
-        JsonArray lore1 = new JsonArray();
-        lore1.add("§7Damage: §c+100");
-        lore1.add("§9§lRARE SWORD");
-        item1.add("lore", lore1);
-        item1.addProperty("description", "A powerful sword with magical properties");
-        item1.addProperty("obtain", "Craft using 2 Diamonds and 1 Stick");
-        JsonArray recipe1 = new JsonArray();
-        recipe1.add(createRecipeRow("", "minecraft:diamond:2", ""));
-        recipe1.add(createRecipeRow("", "minecraft:diamond:2", ""));
-        recipe1.add(createRecipeRow("", "minecraft:stick", ""));
-        item1.add("recipe", recipe1);
-        items.add(item1);
-
-        // Item 2: Magical Pickaxe
+        // Item 4: Magical Pickaxe
         JsonObject item2 = new JsonObject();
         item2.addProperty("id", "magical_pickaxe");
-        item2.addProperty("name", "§5Magical Pickaxe");
+        item2.addProperty("name", "\u00A75Magical Pickaxe");
         item2.addProperty("material", "minecraft:diamond_pickaxe");
         JsonArray lore2 = new JsonArray();
-        lore2.add("§7Mining Speed: §a+200%");
-        lore2.add("§5§lEPIC");
+        lore2.add("\u00A77Mining Speed: \u00A7a+200%");
+        lore2.add("\u00A75\u00A7lEPIC");
         item2.add("lore", lore2);
         item2.addProperty("description", "Mines at incredible speed");
         item2.addProperty("obtain", "Craft using 3 Diamonds and 2 Sticks");
@@ -105,14 +89,14 @@ public class ItemRegistry {
         item2.add("recipe", recipe2);
         items.add(item2);
 
-        // Item 3: Health Potion
+        // Item 5: Health Potion
         JsonObject item3 = new JsonObject();
         item3.addProperty("id", "health_potion");
-        item3.addProperty("name", "§cHealth Potion");
+        item3.addProperty("name", "\u00A7cHealth Potion");
         item3.addProperty("material", "minecraft:potion");
         JsonArray lore3 = new JsonArray();
-        lore3.add("§7Restores §c+200 HP");
-        lore3.add("§a§lUNCOMMON");
+        lore3.add("\u00A77Restores \u00A7c+200 HP");
+        lore3.add("\u00A7a\u00A7lUNCOMMON");
         item3.add("lore", lore3);
         item3.addProperty("description", "Restores health instantly");
         item3.addProperty("obtain", "Brew or craft");
@@ -123,14 +107,14 @@ public class ItemRegistry {
         item3.add("recipe", recipe3);
         items.add(item3);
 
-        // Item 4: Golden Apple
+        // Item 6: Golden Apple
         JsonObject item4 = new JsonObject();
         item4.addProperty("id", "super_golden_apple");
-        item4.addProperty("name", "§6Super Golden Apple");
+        item4.addProperty("name", "\u00A76Super Golden Apple");
         item4.addProperty("material", "minecraft:golden_apple");
         JsonArray lore4 = new JsonArray();
-        lore4.add("§7Regeneration II");
-        lore4.add("§6§lLEGENDARY");
+        lore4.add("\u00A77Regeneration II");
+        lore4.add("\u00A76\u00A7lLEGENDARY");
         item4.add("lore", lore4);
         item4.addProperty("description", "Provides powerful buffs");
         item4.addProperty("obtain", "Craft using Gold Blocks and Apple");
@@ -141,14 +125,14 @@ public class ItemRegistry {
         item4.add("recipe", recipe4);
         items.add(item4);
 
-        // Item 5: Speed Boots
+        // Item 7: Speed Boots
         JsonObject item5 = new JsonObject();
         item5.addProperty("id", "speed_boots");
-        item5.addProperty("name", "§bSpeed Boots");
+        item5.addProperty("name", "\u00A7bSpeed Boots");
         item5.addProperty("material", "minecraft:diamond_boots");
         JsonArray lore5 = new JsonArray();
-        lore5.add("§7Speed: §a+50%");
-        lore5.add("§9§lRARE");
+        lore5.add("\u00A77Speed: \u00A7a+50%");
+        lore5.add("\u00A79\u00A7lRARE");
         item5.add("lore", lore5);
         item5.addProperty("description", "Run faster with these boots");
         item5.addProperty("obtain", "Craft using Diamonds and Feathers");
@@ -160,15 +144,15 @@ public class ItemRegistry {
         items.add(item5);
 
         // Add more basic items without recipes
-        for (int i = 6; i <= 150; i++) {
+        for (int i = 8; i <= 150; i++) {
             JsonObject item = new JsonObject();
             item.addProperty("id", "custom_item_" + i);
-            item.addProperty("name", "§6Custom Item #" + i);
+            item.addProperty("name", "\u00A76Custom Item #" + i);
             item.addProperty("material", "minecraft:diamond");
 
             JsonArray lore = new JsonArray();
-            lore.add("§7This is item number " + i);
-            lore.add("§aRarity: LEGENDARY");
+            lore.add("\u00A77This is item number " + i);
+            lore.add("\u00A7aRarity: LEGENDARY");
             item.add("lore", lore);
 
             item.addProperty("description", "This is a custom item #" + i + " for testing purposes.");
@@ -187,12 +171,106 @@ public class ItemRegistry {
         ItemList.LOGGER.info("Created default items.json with {} items", items.size());
     }
 
+    private static JsonObject buildEnchantedDiamondJson() {
+        JsonObject enchantedDiamond = new JsonObject();
+        enchantedDiamond.addProperty("id", "enchanted_diamond");
+        enchantedDiamond.addProperty("name", "\u00A7bEnchanted Diamond");
+        enchantedDiamond.addProperty("material", "minecraft:diamond");
+        JsonArray lore = new JsonArray();
+        lore.add("\u00A77Condenses the power of nine diamonds.");
+        lore.add("\u00A79\u00A7lRARE COMPONENT");
+        enchantedDiamond.add("lore", lore);
+        enchantedDiamond.addProperty("description", "Packed diamond dust that glows with latent energy.");
+        enchantedDiamond.addProperty("obtain", "Combine 9 Diamonds in a crafting grid.");
+        JsonArray recipe = new JsonArray();
+        recipe.add(createRecipeRow("minecraft:diamond", "minecraft:diamond", "minecraft:diamond"));
+        recipe.add(createRecipeRow("minecraft:diamond", "minecraft:diamond", "minecraft:diamond"));
+        recipe.add(createRecipeRow("minecraft:diamond", "minecraft:diamond", "minecraft:diamond"));
+        enchantedDiamond.add("recipe", recipe);
+        return enchantedDiamond;
+    }
+
+    private static JsonObject buildEnchantedStickJson() {
+        JsonObject enchantedStick = new JsonObject();
+        enchantedStick.addProperty("id", "enchanted_stick");
+        enchantedStick.addProperty("name", "\u00A76Enchanted Stick");
+        enchantedStick.addProperty("material", "minecraft:stick");
+        JsonArray lore = new JsonArray();
+        lore.add("\u00A77Infused with blaze powder and ancient sap.");
+        lore.add("\u00A7e\u00A7lEPIC COMPONENT");
+        enchantedStick.add("lore", lore);
+        enchantedStick.addProperty("description", "Perfect handle material for high-tier weapons.");
+        enchantedStick.addProperty("obtain", "Empower sticks with blaze powder and more sticks.");
+        JsonArray recipe = new JsonArray();
+        recipe.add(createRecipeRow("", "minecraft:stick", ""));
+        recipe.add(createRecipeRow("minecraft:stick", "minecraft:blaze_powder", "minecraft:stick"));
+        recipe.add(createRecipeRow("", "minecraft:stick", ""));
+        enchantedStick.add("recipe", recipe);
+        return enchantedStick;
+    }
+
+    private static JsonObject buildEnchantedDiamondSwordJson() {
+        JsonObject enchantedSword = new JsonObject();
+        enchantedSword.addProperty("id", "enchanted_diamond_sword");
+        enchantedSword.addProperty("name", "\u00A7bEnchanted Diamond Sword");
+        enchantedSword.addProperty("material", "minecraft:diamond_sword");
+        JsonArray lore = new JsonArray();
+        lore.add("\u00A77Damage: \u00A7c+125");
+        lore.add("\u00A79\u00A7lMYTHIC WEAPON");
+        enchantedSword.add("lore", lore);
+        enchantedSword.addProperty("description", "Channel two enchanted diamonds onto a steady handle.");
+        enchantedSword.addProperty("obtain", "Craft using 2 Enchanted Diamonds and 1 Stick.");
+        JsonArray recipe = new JsonArray();
+        recipe.add(createRecipeRow("", "enchanted_diamond", ""));
+        recipe.add(createRecipeRow("", "enchanted_diamond", ""));
+        recipe.add(createRecipeRow("", "minecraft:stick", ""));
+        enchantedSword.add("recipe", recipe);
+        return enchantedSword;
+    }
+
     private static JsonArray createRecipeRow(String slot1, String slot2, String slot3) {
         JsonArray row = new JsonArray();
         row.add(slot1);
         row.add(slot2);
         row.add(slot3);
         return row;
+    }
+
+    private static boolean ensureEssentialItems(JsonObject root, JsonArray itemsArray, File file) throws IOException {
+        boolean mutated = false;
+
+        if (!containsItem(itemsArray, "enchanted_diamond")) {
+            itemsArray.add(buildEnchantedDiamondJson());
+            mutated = true;
+        }
+        if (!containsItem(itemsArray, "enchanted_stick")) {
+            itemsArray.add(buildEnchantedStickJson());
+            mutated = true;
+        }
+        if (!containsItem(itemsArray, "enchanted_diamond_sword")) {
+            itemsArray.add(buildEnchantedDiamondSwordJson());
+            mutated = true;
+        }
+
+        if (mutated) {
+            try (FileWriter writer = new FileWriter(file)) {
+                GSON.toJson(root, writer);
+            }
+        }
+
+        return mutated;
+    }
+
+    private static boolean containsItem(JsonArray itemsArray, String id) {
+        for (JsonElement element : itemsArray) {
+            if (element.isJsonObject()) {
+                JsonObject obj = element.getAsJsonObject();
+                if (obj.has("id") && id.equals(obj.get("id").getAsString())) {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     private static void loadItemsFromFile(File file) throws IOException {
@@ -215,6 +293,10 @@ public class ItemRegistry {
             }
 
             JsonArray itemsArray = root.getAsJsonArray("items");
+            boolean appendedDefaults = ensureEssentialItems(root, itemsArray, file);
+            if (appendedDefaults) {
+                ItemList.LOGGER.info("Appended missing default ItemList entries to {}", file.getName());
+            }
             ItemList.LOGGER.info("Found items array with {} entries", itemsArray.size());
 
             ITEMS.clear();
