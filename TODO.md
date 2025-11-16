@@ -1,0 +1,6 @@
+- [x] Change selectedFilter to selectedFilters (Set<String>)
+- [x] Modify updateFilters() to split categories into one-word filters
+- [x] Update mouseClicked() for toggle logic with special "All" handling
+- [x] Modify updateFilteredItems() for multi-filter logic
+- [x] Update render() to highlight selected filters
+- [x] Test filtering functionality
