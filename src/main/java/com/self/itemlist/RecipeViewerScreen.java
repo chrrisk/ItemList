@@ -147,11 +147,11 @@ public class RecipeViewerScreen extends Screen {
 
                 ItemStack stack = inventory.getStack(row * gridCols + col);
                 if (!stack.isEmpty()) {
-                    // Draw count for recipe output in conventional position
+                    // Draw count for recipe output in typical Minecraft position
                     if (col == 7 && row == 3 && stack.getCount() > 1) {
                         String countText = String.valueOf(stack.getCount());
-                        int textX = slotX + 16 - this.textRenderer.getWidth(countText) + 10; // Move right by 10 pixels
-                        int textY = slotY + 7; // Position at bottom of slot to avoid overlap
+                        int textX = slotX + 16 - this.textRenderer.getWidth(countText);
+                        int textY = slotY + 9;
                         context.drawText(this.textRenderer, Text.literal(countText), textX, textY, 0xFFFFFF, false);
                     }
                 }

@@ -28,6 +28,13 @@ public class HandledScreenMixin {
         ItemListScreen.render(context, mouseX, mouseY, delta, (HandledScreen<?>) (Object) this);
     }
 
+    @Inject(method = "mouseClicked", at = @At("HEAD"), cancellable = true)
+    private void onMouseClicked(double mouseX, double mouseY, int button, CallbackInfoReturnable<Boolean> cir) {
+        if (ItemListScreen.mouseClicked(mouseX, mouseY, button, (HandledScreen<?>) (Object) this)) {
+            cir.setReturnValue(true);
+        }
+    }
+
     @Inject(method = "keyPressed", at = @At("HEAD"), cancellable = true)
     private void onKeyPressed(int keyCode, int scanCode, int modifiers, CallbackInfoReturnable<Boolean> cir) {
         if (keyCode == GLFW.GLFW_KEY_T) {
