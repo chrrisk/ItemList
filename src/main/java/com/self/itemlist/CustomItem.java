@@ -15,15 +15,17 @@ public class CustomItem {
     private List<String> lore;
     private String description;
     private String obtain;
+    private String category;
     private List<CraftingRecipe> recipes;
 
-    public CustomItem(String id, String name, String material, List<String> lore, String description, String obtain) {
+    public CustomItem(String id, String name, String material, List<String> lore, String description, String obtain, String category) {
         this.id = id;
         this.name = name;
         this.material = material;
         this.lore = lore != null ? lore : new ArrayList<>();
         this.description = description != null ? description : "";
         this.obtain = obtain != null && !obtain.isEmpty() ? obtain : "No information available";
+        this.category = category != null ? category : "Misc";
         this.recipes = new ArrayList<>();
     }
 
@@ -49,6 +51,10 @@ public class CustomItem {
 
     public String getObtain() {
         return obtain;
+    }
+
+    public String getCategory() {
+        return category;
     }
 
     public List<CraftingRecipe> getRecipes() {
@@ -94,14 +100,36 @@ public class CustomItem {
     }
 
     public static class CraftingRecipe {
-        private RecipeIngredient[][] pattern; // 3x3 grid
+        private RecipeIngredient[][] pattern;
+        private int rows;
+        private int cols;
+        private int outputCount;
 
         public CraftingRecipe(RecipeIngredient[][] pattern) {
+            this(pattern, 1);
+        }
+
+        public CraftingRecipe(RecipeIngredient[][] pattern, int outputCount) {
             this.pattern = pattern;
+            this.rows = pattern.length;
+            this.cols = pattern.length > 0 ? pattern[0].length : 0;
+            this.outputCount = outputCount;
         }
 
         public RecipeIngredient[][] getPattern() {
             return pattern;
+        }
+
+        public int getRows() {
+            return rows;
+        }
+
+        public int getCols() {
+            return cols;
+        }
+
+        public int getOutputCount() {
+            return outputCount;
         }
     }
 

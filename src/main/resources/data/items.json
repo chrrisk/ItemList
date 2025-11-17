@@ -1,0 +1,1576 @@
+{
+  "items": [
+    {
+      "id": "enchanted_diamond",
+      "name": "\u00A7bEnchanted Diamond",
+      "material": "minecraft:diamond",
+      "lore": [
+        "\u00A77Condenses the power of 160 diamonds.",
+        "\u00A79\u00A7lRARE COMPONENT"
+      ],
+      "description": "Packed diamond dust that glows with latent energy.",
+      "obtain": "Combine 160 Diamonds in a 5x3 crafting grid.",
+      "category": "Materials",
+      "recipe": [
+        ["minecraft:diamond:32", "minecraft:diamond:32", "minecraft:diamond:32"],
+        ["minecraft:diamond:32", "minecraft:diamond:32", "minecraft:diamond:32"],
+        ["minecraft:diamond:32", "minecraft:diamond:32", "minecraft:diamond:32"],
+        ["minecraft:diamond:32", "minecraft:diamond:32", "minecraft:diamond:32"],
+        ["minecraft:diamond:32", "minecraft:diamond:32", "minecraft:diamond:32"]
+      ],
+      "outputCount": 32
+    },
+    {
+      "id": "enchanted_stick",
+      "name": "\u00A76Enchanted Stick",
+      "material": "minecraft:stick",
+      "lore": [
+        "\u00A77Infused with blaze powder and ancient sap.",
+        "\u00A7e\u00A7lEPIC COMPONENT"
+      ],
+      "description": "Perfect handle material for high-tier weapons.",
+      "obtain": "Empower sticks with blaze powder and more sticks.",
+      "category": "Sticks",
+      "recipe": [
+        ["", "minecraft:stick", ""],
+        ["minecraft:stick", "minecraft:blaze_powder", "minecraft:stick"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "enchanted_diamond_sword",
+      "name": "\u00A7bEnchanted Diamond Sword",
+      "material": "minecraft:diamond_sword",
+      "lore": [
+        "\u00A77Damage: \u00A7c+125",
+        "\u00A79\u00A7lMYTHIC WEAPON"
+      ],
+      "description": "Channel two enchanted diamonds onto a steady handle.",
+      "obtain": "Craft using 2 Enchanted Diamonds and 1 Stick.",
+      "category": "Weapons,Melee",
+      "recipe": [
+        ["", "enchanted_diamond", ""],
+        ["", "enchanted_diamond", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "mage_staff",
+      "name": "\u00A7dMage Staff",
+      "material": "minecraft:stick",
+      "lore": [
+        "\u00A77Mana: \u00A7b+200",
+        "\u00A7d\u00A7lMAGIC WEAPON"
+      ],
+      "description": "A staff imbued with arcane energy.",
+      "obtain": "Craft with enchanted diamonds and a stick.",
+      "category": "Weapons,Mage",
+      "recipe": [
+        ["", "enchanted_diamond", ""],
+        ["", "minecraft:stick", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "ranger_bow",
+      "name": "\u00A7aRanger Bow",
+      "material": "minecraft:bow",
+      "lore": [
+        "\u00A77Damage: \u00A7c+100",
+        "\u00A7a\u00A7lRANGER WEAPON"
+      ],
+      "description": "A precise bow for long-range attacks.",
+      "obtain": "Craft with enchanted diamonds and string.",
+      "category": "Weapons,Ranger",
+      "recipe": [
+        ["", "minecraft:string", "enchanted_diamond"],
+        ["minecraft:stick", "", "minecraft:string"],
+        ["", "minecraft:string", "enchanted_diamond"]
+      ]
+    },
+    {
+      "id": "melee_axe",
+      "name": "\u00A7cMelee Axe",
+      "material": "minecraft:diamond_axe",
+      "lore": [
+        "\u00A77Damage: \u00A7c+150",
+        "\u00A7c\u00A7lMELEE WEAPON"
+      ],
+      "description": "A heavy axe for close combat.",
+      "obtain": "Craft with enchanted diamonds and sticks.",
+      "category": "Weapons,Melee",
+      "recipe": [
+        ["enchanted_diamond", "enchanted_diamond", ""],
+        ["enchanted_diamond", "minecraft:stick", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "mage_sword",
+      "name": "\u00A7dMage Sword",
+      "material": "minecraft:diamond_sword",
+      "lore": [
+        "\u00A77Damage: \u00A7c+120, Mana: \u00A7b+50",
+        "\u00A7d\u00A7lHYBRID WEAPON"
+      ],
+      "description": "A sword with magical enhancements.",
+      "obtain": "Craft with enchanted diamonds and a mage staff.",
+      "category": "Weapons,Mage,Melee",
+      "recipe": [
+        ["", "enchanted_diamond", ""],
+        ["", "mage_staff", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "ranger_crossbow",
+      "name": "\u00A7aRanger Crossbow",
+      "material": "minecraft:crossbow",
+      "lore": [
+        "\u00A77Damage: \u00A7c+110",
+        "\u00A7a\u00A7lRANGER WEAPON"
+      ],
+      "description": "A powerful crossbow for rangers.",
+      "obtain": "Craft with enchanted diamonds and tripwire.",
+      "category": "Weapons,Ranger",
+      "recipe": [
+        ["enchanted_diamond", "minecraft:tripwire_hook", "enchanted_diamond"],
+        ["minecraft:string", "minecraft:stick", "minecraft:string"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "melee_mace",
+      "name": "\u00A7cMelee Mace",
+      "material": "minecraft:iron_ingot",
+      "lore": [
+        "\u00A77Damage: \u00A7c+140",
+        "\u00A7c\u00A7lMELEE WEAPON"
+      ],
+      "description": "A spiked mace for crushing blows.",
+      "obtain": "Craft with iron and sticks.",
+      "category": "Weapons,Melee",
+      "recipe": [
+        ["minecraft:iron_ingot", "minecraft:iron_ingot", ""],
+        ["minecraft:iron_ingot", "minecraft:stick", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "mage_wand",
+      "name": "\u00A7dMage Wand",
+      "material": "minecraft:stick",
+      "lore": [
+        "\u00A77Mana: \u00A7b+300",
+        "\u00A7d\u00A7lMAGIC TOOL"
+      ],
+      "description": "A wand for casting spells.",
+      "obtain": "Craft with enchanted diamonds.",
+      "category": "Weapons,Mage",
+      "recipe": [
+        ["", "enchanted_diamond", ""],
+        ["", "minecraft:stick", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "ranger_arrow",
+      "name": "\u00A7aRanger Arrow",
+      "material": "minecraft:arrow",
+      "lore": [
+        "\u00A77Damage: \u00A7c+20",
+        "\u00A7a\u00A7lAMMO"
+      ],
+      "description": "Enhanced arrows for rangers.",
+      "obtain": "Craft with feathers and sticks.",
+      "category": "Ammo,Ranger",
+      "recipe": [
+        ["", "minecraft:feather", ""],
+        ["", "minecraft:stick", ""],
+        ["", "minecraft:flint", ""]
+      ],
+      "outputCount": 4
+    },
+    {
+      "id": "magic_arrow",
+      "name": "\u00A7dMagic Arrow",
+      "material": "minecraft:arrow",
+      "lore": [
+        "\u00A77Damage: \u00A7c+25, Mana Cost: \u00A7b-10",
+        "\u00A7d\u00A7lMAGIC AMMO"
+      ],
+      "description": "Arrows infused with magic.",
+      "obtain": "Craft with enchanted diamonds and arrows.",
+      "category": "Ammo,Mage",
+      "recipe": [
+        ["", "enchanted_diamond", ""],
+        ["", "minecraft:arrow", ""],
+        ["", "minecraft:arrow", ""]
+      ],
+      "outputCount": 2
+    },
+    {
+      "id": "explosive_arrow",
+      "name": "\u00A7cExplosive Arrow",
+      "material": "minecraft:arrow",
+      "lore": [
+        "\u00A77Damage: \u00A7c+50 (Area)",
+        "\u00A7c\u00A7lEXPLOSIVE AMMO"
+      ],
+      "description": "Arrows that explode on impact.",
+      "obtain": "Craft with TNT and arrows.",
+      "category": "Ammo,Ranger",
+      "recipe": [
+        ["", "minecraft:tnt", ""],
+        ["", "minecraft:arrow", ""],
+        ["", "minecraft:arrow", ""]
+      ],
+      "outputCount": 2
+    },
+    {
+      "id": "poison_arrow",
+      "name": "\u00A72Poison Arrow",
+      "material": "minecraft:arrow",
+      "lore": [
+        "\u00A77Damage: \u00A7c+15, Poison: \u00A72+5s",
+        "\u00A72\u00A7lPOISON AMMO"
+      ],
+      "description": "Arrows coated with poison.",
+      "obtain": "Craft with spider eyes and arrows.",
+      "category": "Ammo,Ranger",
+      "recipe": [
+        ["", "minecraft:spider_eye", ""],
+        ["", "minecraft:arrow", ""],
+        ["", "minecraft:arrow", ""]
+      ],
+      "outputCount": 2
+    },
+    {
+      "id": "fire_arrow",
+      "name": "\u00A7cFire Arrow",
+      "material": "minecraft:arrow",
+      "lore": [
+        "\u00A77Damage: \u00A7c+20, Fire: \u00A7c+3s",
+        "\u00A7c\u00A7lFIRE AMMO"
+      ],
+      "description": "Arrows that ignite targets.",
+      "obtain": "Craft with blaze powder and arrows.",
+      "category": "Ammo,Ranger",
+      "recipe": [
+        ["", "minecraft:blaze_powder", ""],
+        ["", "minecraft:arrow", ""],
+        ["", "minecraft:arrow", ""]
+      ],
+      "outputCount": 2
+    },
+    {
+      "id": "mage_helmet",
+      "name": "\u00A7dMage Helmet",
+      "material": "minecraft:diamond_helmet",
+      "lore": [
+        "\u00A77Defense: \u00A7a+50, Mana: \u00A7b+100",
+        "\u00A7d\u00A7lMAGIC ARMOR"
+      ],
+      "description": "A helmet that boosts magical abilities.",
+      "obtain": "Craft with enchanted diamonds.",
+      "category": "Armor,Mage",
+      "recipe": [
+        ["enchanted_diamond", "enchanted_diamond", "enchanted_diamond"],
+        ["enchanted_diamond", "", "enchanted_diamond"],
+        ["", "", ""]
+      ]
+    },
+    {
+      "id": "ranger_chestplate",
+      "name": "\u00A7aRanger Chestplate",
+      "material": "minecraft:diamond_chestplate",
+      "lore": [
+        "\u00A77Defense: \u00A7a+80",
+        "\u00A7a\u00A7lRANGER ARMOR"
+      ],
+      "description": "Light armor for mobility.",
+      "obtain": "Craft with enchanted diamonds.",
+      "category": "Armor,Ranger",
+      "recipe": [
+        ["enchanted_diamond", "", "enchanted_diamond"],
+        ["enchanted_diamond", "enchanted_diamond", "enchanted_diamond"],
+        ["enchanted_diamond", "enchanted_diamond", "enchanted_diamond"]
+      ]
+    },
+    {
+      "id": "melee_boots",
+      "name": "\u00A7cMelee Boots",
+      "material": "minecraft:diamond_boots",
+      "lore": [
+        "\u00A77Defense: \u00A7a+40",
+        "\u00A7c\u00A7lMELEE ARMOR"
+      ],
+      "description": "Boots for melee fighters.",
+      "obtain": "Craft with enchanted diamonds.",
+      "category": "Armor,Melee",
+      "recipe": [
+        ["", "", ""],
+        ["enchanted_diamond", "", "enchanted_diamond"],
+        ["enchanted_diamond", "", "enchanted_diamond"]
+      ]
+    },
+    {
+      "id": "mage_armor_set",
+      "name": "\u00A7dMage Armor Set",
+      "material": "minecraft:diamond_chestplate",
+      "lore": [
+        "\u00A77Full set bonus: Mana Regen +50%",
+        "\u00A7d\u00A7lMAGIC ARMOR SET"
+      ],
+      "description": "Complete mage armor set.",
+      "obtain": "Craft individual pieces.",
+      "category": "Armor,Mage",
+      "recipe": [
+        ["mage_helmet", "", ""],
+        ["", "ranger_chestplate", ""],
+        ["", "", "melee_boots"]
+      ]
+    },
+    {
+      "id": "ranger_leggings",
+      "name": "\u00A7aRanger Leggings",
+      "material": "minecraft:diamond_leggings",
+      "lore": [
+        "\u00A77Defense: \u00A7a+60",
+        "\u00A7a\u00A7lRANGER ARMOR"
+      ],
+      "description": "Leggings for rangers.",
+      "obtain": "Craft with enchanted diamonds.",
+      "category": "Armor,Ranger",
+      "recipe": [
+        ["enchanted_diamond", "enchanted_diamond", "enchanted_diamond"],
+        ["enchanted_diamond", "", "enchanted_diamond"],
+        ["enchanted_diamond", "", "enchanted_diamond"]
+      ]
+    },
+    {
+      "id": "melee_helmet",
+      "name": "\u00A7cMelee Helmet",
+      "material": "minecraft:diamond_helmet",
+      "lore": [
+        "\u00A77Defense: \u00A7a+50",
+        "\u00A7c\u00A7lMELEE ARMOR"
+      ],
+      "description": "Helmet for melee combat.",
+      "obtain": "Craft with enchanted diamonds.",
+      "category": "Armor,Melee",
+      "recipe": [
+        ["enchanted_diamond", "enchanted_diamond", "enchanted_diamond"],
+        ["enchanted_diamond", "", "enchanted_diamond"],
+        ["", "", ""]
+      ]
+    },
+    {
+      "id": "damage_augment",
+      "name": "\u00A7cDamage Augment",
+      "material": "minecraft:player_head",
+      "lore": [
+        "\u00A77Increases damage by 20%",
+        "\u00A7c\u00A7lAUGMENT"
+      ],
+      "description": "An augment that boosts weapon damage.",
+      "obtain": "Craft with nether stars and diamonds.",
+      "category": "Augments",
+      "recipe": [
+        ["minecraft:nether_star", "minecraft:diamond", "minecraft:nether_star"],
+        ["minecraft:diamond", "minecraft:nether_star", "minecraft:diamond"],
+        ["minecraft:nether_star", "minecraft:diamond", "minecraft:nether_star"]
+      ]
+    },
+    {
+      "id": "mana_augment",
+      "name": "\u00A7bMana Augment",
+      "material": "minecraft:player_head",
+      "lore": [
+        "\u00A77Increases mana by 30%",
+        "\u00A7b\u00A7lAUGMENT"
+      ],
+      "description": "An augment that boosts mana capacity.",
+      "obtain": "Craft with lapis and diamonds.",
+      "category": "Augments",
+      "recipe": [
+        ["minecraft:lapis_lazuli", "minecraft:diamond", "minecraft:lapis_lazuli"],
+        ["minecraft:diamond", "minecraft:lapis_lazuli", "minecraft:diamond"],
+        ["minecraft:lapis_lazuli", "minecraft:diamond", "minecraft:lapis_lazuli"]
+      ]
+    },
+    {
+      "id": "speed_augment",
+      "name": "\u00A7eSpeed Augment",
+      "material": "minecraft:player_head",
+      "lore": [
+        "\u00A77Increases speed by 25%",
+        "\u00A7e\u00A7lAUGMENT"
+      ],
+      "description": "An augment that boosts movement speed.",
+      "obtain": "Craft with sugar and diamonds.",
+      "category": "Augments",
+      "recipe": [
+        ["minecraft:sugar", "minecraft:diamond", "minecraft:sugar"],
+        ["minecraft:diamond", "minecraft:sugar", "minecraft:diamond"],
+        ["minecraft:sugar", "minecraft:diamond", "minecraft:sugar"]
+      ]
+    },
+    {
+      "id": "health_augment",
+      "name": "\u00A7aHealth Augment",
+      "material": "minecraft:player_head",
+      "lore": [
+        "\u00A77Increases health by 20%",
+        "\u00A7a\u00A7lAUGMENT"
+      ],
+      "description": "An augment that boosts max health.",
+      "obtain": "Craft with golden apples and diamonds.",
+      "category": "Augments",
+      "recipe": [
+        ["minecraft:golden_apple", "minecraft:diamond", "minecraft:golden_apple"],
+        ["minecraft:diamond", "minecraft:golden_apple", "minecraft:diamond"],
+        ["minecraft:golden_apple", "minecraft:diamond", "minecraft:golden_apple"]
+      ]
+    },
+    {
+      "id": "defense_augment",
+      "name": "\u00A79Defense Augment",
+      "material": "minecraft:player_head",
+      "lore": [
+        "\u00A77Increases defense by 15%",
+        "\u00A79\u00A7lAUGMENT"
+      ],
+      "description": "An augment that boosts armor defense.",
+      "obtain": "Craft with obsidian and diamonds.",
+      "category": "Augments",
+      "recipe": [
+        ["minecraft:obsidian", "minecraft:diamond", "minecraft:obsidian"],
+        ["minecraft:diamond", "minecraft:obsidian", "minecraft:diamond"],
+        ["minecraft:obsidian", "minecraft:diamond", "minecraft:obsidian"]
+      ]
+    },
+    {
+      "id": "fishing_rod",
+      "name": "\u00A73Fishing Rod",
+      "material": "minecraft:fishing_rod",
+      "lore": [
+        "\u00A77Catch rate: +50%",
+        "\u00A73\u00A7lFISHING TOOL"
+      ],
+      "description": "An enhanced fishing rod.",
+      "obtain": "Craft with enchanted sticks and string.",
+      "category": "Fishing",
+      "recipe": [
+        ["", "", "enchanted_stick"],
+        ["", "enchanted_stick", "minecraft:string"],
+        ["enchanted_stick", "", "minecraft:string"]
+      ]
+    },
+    {
+      "id": "bait",
+      "name": "\u00A73Bait",
+      "material": "minecraft:carrot",
+      "lore": [
+        "\u00A77Attracts rare fish",
+        "\u00A73\u00A7lFISHING ITEM"
+      ],
+      "description": "Special bait for fishing.",
+      "obtain": "Craft with carrots and enchanted diamonds.",
+      "category": "Fishing",
+      "recipe": [
+        ["", "minecraft:carrot", ""],
+        ["minecraft:carrot", "enchanted_diamond", "minecraft:carrot"],
+        ["", "minecraft:carrot", ""]
+      ],
+      "outputCount": 8
+    },
+    {
+      "id": "fishing_net",
+      "name": "\u00A73Fishing Net",
+      "material": "minecraft:string",
+      "lore": [
+        "\u00A77Catches multiple fish",
+        "\u00A73\u00A7lFISHING TOOL"
+      ],
+      "description": "A net for bulk fishing.",
+      "obtain": "Craft with string and sticks.",
+      "category": "Fishing",
+      "recipe": [
+        ["minecraft:string", "minecraft:string", "minecraft:string"],
+        ["minecraft:string", "", "minecraft:string"],
+        ["minecraft:stick", "", "minecraft:stick"]
+      ]
+    },
+    {
+      "id": "enchanted_fish",
+      "name": "\u00A73Enchanted Fish",
+      "material": "minecraft:cod",
+      "lore": [
+        "\u00A77Restores 10 hunger",
+        "\u00A73\u00A7lFISHING DROP"
+      ],
+      "description": "A magical fish.",
+      "obtain": "Caught with fishing rod.",
+      "category": "Fishing,MobDrops",
+      "recipe": []
+    },
+    {
+      "id": "golden_hook",
+      "name": "\u00A73Golden Hook",
+      "material": "minecraft:gold_ingot",
+      "lore": [
+        "\u00A77Rare catch chance +100%",
+        "\u00A73\u00A7lFISHING ACCESSORY"
+      ],
+      "description": "A hook made of gold.",
+      "obtain": "Craft with gold ingots.",
+      "category": "Fishing",
+      "recipe": [
+        ["", "minecraft:gold_ingot", ""],
+        ["minecraft:gold_ingot", "", "minecraft:gold_ingot"],
+        ["", "minecraft:gold_ingot", ""]
+      ]
+    },
+    {
+      "id": "wheat_seeds",
+      "name": "\u00A7eWheat Seeds",
+      "material": "minecraft:wheat_seeds",
+      "lore": [
+        "\u00A77Grows wheat",
+        "\u00A7e\u00A7lFARMING ITEM"
+      ],
+      "description": "Seeds for farming wheat.",
+      "obtain": "Harvest from grass.",
+      "category": "Farming",
+      "recipe": []
+    },
+    {
+      "id": "hoe",
+      "name": "\u00A7eHoe",
+      "material": "minecraft:diamond_hoe",
+      "lore": [
+        "\u00A77Harvest speed +50%",
+        "\u00A7e\u00A7lFARMING TOOL"
+      ],
+      "description": "A tool for farming.",
+      "obtain": "Craft with diamonds and sticks.",
+      "category": "Farming",
+      "recipe": [
+        ["minecraft:diamond", "minecraft:diamond", ""],
+        ["", "minecraft:stick", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "fertilizer",
+      "name": "\u00A7eFertilizer",
+      "material": "minecraft:bone_meal",
+      "lore": [
+        "\u00A77Growth speed +200%",
+        "\u00A7e\u00A7lFARMING ITEM"
+      ],
+      "description": "Speeds up plant growth.",
+      "obtain": "Craft with bone meal and enchanted diamonds.",
+      "category": "Farming",
+      "recipe": [
+        ["minecraft:bone_meal", "enchanted_diamond", "minecraft:bone_meal"],
+        ["enchanted_diamond", "minecraft:bone_meal", "enchanted_diamond"],
+        ["minecraft:bone_meal", "enchanted_diamond", "minecraft:bone_meal"]
+      ],
+      "outputCount": 4
+    },
+    {
+      "id": "enchanted_wheat",
+      "name": "\u00A7eEnchanted Wheat",
+      "material": "minecraft:wheat",
+      "lore": [
+        "\u00A77Restores 5 hunger",
+        "\u00A7e\u00A7lFARMING PRODUCT"
+      ],
+      "description": "Magical wheat.",
+      "obtain": "Harvest from enchanted crops.",
+      "category": "Farming",
+      "recipe": []
+    },
+    {
+      "id": "watering_can",
+      "name": "\u00A7eWatering Can",
+      "material": "minecraft:bucket",
+      "lore": [
+        "\u00A77Hydrates crops instantly",
+        "\u00A7e\u00A7lFARMING TOOL"
+      ],
+      "description": "A can for watering plants.",
+      "obtain": "Craft with buckets and enchanted diamonds.",
+      "category": "Farming",
+      "recipe": [
+        ["enchanted_diamond", "", "enchanted_diamond"],
+        ["minecraft:bucket", "", "minecraft:bucket"],
+        ["", "minecraft:bucket", ""]
+      ]
+    },
+    {
+      "id": "woodcutting_axe",
+      "name": "\u00A76Woodcutting Axe",
+      "material": "minecraft:diamond_axe",
+      "lore": [
+        "\u00A77Chop speed +100%",
+        "\u00A76\u00A7lWOODCUTTING TOOL"
+      ],
+      "description": "An axe for cutting wood.",
+      "obtain": "Craft with diamonds and sticks.",
+      "category": "Woodcutting",
+      "recipe": [
+        ["minecraft:diamond", "minecraft:diamond", ""],
+        ["minecraft:diamond", "minecraft:stick", ""],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "enchanted_log",
+      "name": "\u00A76Enchanted Log",
+      "material": "minecraft:oak_log",
+      "lore": [
+        "\u00A77Rare wood",
+        "\u00A76\u00A7lWOODCUTTING DROP"
+      ],
+      "description": "A magical log.",
+      "obtain": "Chop enchanted trees.",
+      "category": "Woodcutting",
+      "recipe": []
+    },
+    {
+      "id": "saw",
+      "name": "\u00A76Saw",
+      "material": "minecraft:iron_ingot",
+      "lore": [
+        "\u00A77Precision cutting",
+        "\u00A76\u00A7lWOODCUTTING TOOL"
+      ],
+      "description": "A saw for wood processing.",
+      "obtain": "Craft with iron and sticks.",
+      "category": "Woodcutting",
+      "recipe": [
+        ["", "minecraft:iron_ingot", ""],
+        ["minecraft:iron_ingot", "minecraft:stick", "minecraft:iron_ingot"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "bark_stripper",
+      "name": "\u00A76Bark Stripper",
+      "material": "minecraft:shears",
+      "lore": [
+        "\u00A77Strips bark efficiently",
+        "\u00A76\u00A7lWOODCUTTING TOOL"
+      ],
+      "description": "Tool for stripping bark.",
+      "obtain": "Craft with shears and enchanted diamonds.",
+      "category": "Woodcutting",
+      "recipe": [
+        ["", "enchanted_diamond", ""],
+        ["minecraft:shears", "enchanted_diamond", "minecraft:shears"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "enchanted_planks",
+      "name": "\u00A76Enchanted Planks",
+      "material": "minecraft:oak_planks",
+      "lore": [
+        "\u00A77Magical wood planks",
+        "\u00A76\u00A7lWOODCUTTING PRODUCT"
+      ],
+      "description": "Planks from enchanted logs.",
+      "obtain": "Craft from enchanted logs.",
+      "category": "Woodcutting",
+      "recipe": [
+        ["enchanted_log"]
+      ],
+      "outputCount": 4
+    },
+    {
+      "id": "cooked_steak",
+      "name": "\u00A7cCooked Steak",
+      "material": "minecraft:cooked_beef",
+      "lore": [
+        "\u00A77Restores 8 hunger",
+        "\u00A7c\u00A7lCOOKING FOOD"
+      ],
+      "description": "Perfectly cooked steak.",
+      "obtain": "Cook beef in furnace.",
+      "category": "Cooking",
+      "recipe": []
+    },
+    {
+      "id": "enchanted_bread",
+      "name": "\u00A7eEnchanted Bread",
+      "material": "minecraft:bread",
+      "lore": [
+        "\u00A77Restores 6 hunger",
+        "\u00A7e\u00A7lCOOKING FOOD"
+      ],
+      "description": "Magical bread.",
+      "obtain": "Bake enchanted wheat.",
+      "category": "Cooking",
+      "recipe": [
+        ["enchanted_wheat", "enchanted_wheat", "enchanted_wheat"]
+      ]
+    },
+    {
+      "id": "golden_carrot",
+      "name": "\u00A7eGolden Carrot",
+      "material": "minecraft:golden_carrot",
+      "lore": [
+        "\u00A77Restores 6 hunger, Speed +10%",
+        "\u00A7e\u00A7lCOOKING FOOD"
+      ],
+      "description": "A carrot made of gold.",
+      "obtain": "Craft with gold and carrots.",
+      "category": "Cooking",
+      "recipe": [
+        ["minecraft:gold_nugget", "minecraft:gold_nugget", "minecraft:gold_nugget"],
+        ["minecraft:gold_nugget", "minecraft:carrot", "minecraft:gold_nugget"],
+        ["minecraft:gold_nugget", "minecraft:gold_nugget", "minecraft:gold_nugget"]
+      ]
+    },
+    {
+      "id": "enchanted_golden_apple",
+      "name": "\u00A7eEnchanted Golden Apple",
+      "material": "minecraft:enchanted_golden_apple",
+      "lore": [
+        "\u00A77Restores 10 hunger, Effects: Regen, Absorption",
+        "\u00A7e\u00A7lCOOKING FOOD"
+      ],
+      "description": "The ultimate food.",
+      "obtain": "Craft with gold blocks and apples.",
+      "category": "Cooking",
+      "recipe": [
+        ["minecraft:gold_block", "minecraft:gold_block", "minecraft:gold_block"],
+        ["minecraft:gold_block", "minecraft:apple", "minecraft:gold_block"],
+        ["minecraft:gold_block", "minecraft:gold_block", "minecraft:gold_block"]
+      ]
+    },
+    {
+      "id": "cake",
+      "name": "\u00A7eCake",
+      "material": "minecraft:cake",
+      "lore": [
+        "\u00A77Restores 14 hunger",
+        "\u00A7e\u00A7lCOOKING FOOD"
+      ],
+      "description": "A delicious cake.",
+      "obtain": "Craft with milk, sugar, eggs, and wheat.",
+      "category": "Cooking",
+      "recipe": [
+        ["minecraft:milk_bucket", "minecraft:milk_bucket", "minecraft:milk_bucket"],
+        ["minecraft:sugar", "minecraft:egg", "minecraft:sugar"],
+        ["minecraft:wheat", "minecraft:wheat", "minecraft:wheat"]
+      ]
+    },
+    {
+      "id": "anvil",
+      "name": "\u00A77Anvil",
+      "material": "minecraft:anvil",
+      "lore": [
+        "\u00A77Repairs tools",
+        "\u00A77\u00A7lARTISAN TOOL"
+      ],
+      "description": "A tool for repairing.",
+      "obtain": "Craft with iron blocks.",
+      "category": "Artisan",
+      "recipe": [
+        ["minecraft:iron_block", "minecraft:iron_block", "minecraft:iron_block"],
+        ["", "minecraft:iron_ingot", ""],
+        ["minecraft:iron_ingot", "minecraft:iron_ingot", "minecraft:iron_ingot"]
+      ]
+    },
+    {
+      "id": "enchanted_book",
+      "name": "\u00A7aEnchanted Book",
+      "material": "minecraft:enchanted_book",
+      "lore": [
+        "\u00A77Random enchantment",
+        "\u00A7a\u00A7lARTISAN ITEM"
+      ],
+      "description": "A book with enchantments.",
+      "obtain": "Craft with books and lapis.",
+      "category": "Artisan",
+      "recipe": [
+        ["minecraft:lapis_lazuli", "minecraft:book", "minecraft:lapis_lazuli"],
+        ["minecraft:lapis_lazuli", "minecraft:book", "minecraft:lapis_lazuli"],
+        ["minecraft:lapis_lazuli", "minecraft:book", "minecraft:lapis_lazuli"]
+      ]
+    },
+    {
+      "id": "smithing_table",
+      "name": "\u00A77Smithing Table",
+      "material": "minecraft:smithing_table",
+      "lore": [
+        "\u00A77Upgrades tools",
+        "\u00A77\u00A7lARTISAN STATION"
+      ],
+      "description": "A table for smithing.",
+      "obtain": "Craft with iron and planks.",
+      "category": "Artisan",
+      "recipe": [
+        ["minecraft:iron_ingot", "minecraft:iron_ingot", ""],
+        ["minecraft:oak_planks", "minecraft:oak_planks", ""],
+        ["minecraft:oak_planks", "minecraft:oak_planks", ""]
+      ]
+    },
+    {
+      "id": "enchanted_iron",
+      "name": "\u00A7fEnchanted Iron",
+      "material": "minecraft:iron_ingot",
+      "lore": [
+        "\u00A77Condenses the power of 160 iron ingots.",
+        "\u00A7f\u00A7lCOMMON COMPONENT"
+      ],
+      "description": "Packed iron dust that glows with latent energy.",
+      "obtain": "Combine 160 Iron Ingots in a 5x3 crafting grid.",
+      "category": "Materials",
+      "recipe": [
+        ["minecraft:iron_ingot:32", "minecraft:iron_ingot:32", "minecraft:iron_ingot:32"],
+        ["minecraft:iron_ingot:32", "minecraft:iron_ingot:32", "minecraft:iron_ingot:32"],
+        ["minecraft:iron_ingot:32", "minecraft:iron_ingot:32", "minecraft:iron_ingot:32"],
+        ["minecraft:iron_ingot:32", "minecraft:iron_ingot:32", "minecraft:iron_ingot:32"],
+        ["minecraft:iron_ingot:32", "minecraft:iron_ingot:32", "minecraft:iron_ingot:32"]
+      ],
+      "outputCount": 32
+    },
+    {
+      "id": "enchanted_gold",
+      "name": "\u00A7eEnchanted Gold",
+      "material": "minecraft:gold_ingot",
+      "lore": [
+        "\u00A77Condenses the power of 160 gold ingots.",
+        "\u00A7e\u00A7lUNCOMMON COMPONENT"
+      ],
+      "description": "Packed gold dust that glows with latent energy.",
+      "obtain": "Combine 160 Gold Ingots in a 5x3 crafting grid.",
+      "category": "Materials",
+      "recipe": [
+        ["minecraft:gold_ingot:32", "minecraft:gold_ingot:32", "minecraft:gold_ingot:32"],
+        ["minecraft:gold_ingot:32", "minecraft:gold_ingot:32", "minecraft:gold_ingot:32"],
+        ["minecraft:gold_ingot:32", "minecraft:gold_ingot:32", "minecraft:gold_ingot:32"],
+        ["minecraft:gold_ingot:32", "minecraft:gold_ingot:32", "minecraft:gold_ingot:32"],
+        ["minecraft:gold_ingot:32", "minecraft:gold_ingot:32", "minecraft:gold_ingot:32"]
+      ],
+      "outputCount": 32
+    },
+    {
+      "id": "enchanted_lapis",
+      "name": "\u00A79Enchanted Lapis",
+      "material": "minecraft:lapis_lazuli",
+      "lore": [
+        "\u00A77Condenses the power of 160 lapis lazuli.",
+        "\u00A79\u00A7lRARE COMPONENT"
+      ],
+      "description": "Packed lapis dust that glows with latent energy.",
+      "obtain": "Combine 160 Lapis Lazuli in a 5x3 crafting grid.",
+      "category": "Materials",
+      "recipe": [
+        ["minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32"],
+        ["minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32"],
+        ["minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32"],
+        ["minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32"],
+        ["minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32", "minecraft:lapis_lazuli:32"]
+      ],
+      "outputCount": 32
+    },
+    {
+      "id": "enchanted_redstone",
+      "name": "\u00A7cEnchanted Redstone",
+      "material": "minecraft:redstone",
+      "lore": [
+        "\u00A77Condenses the power of 160 redstone dust.",
+        "\u00A7c\u00A7lEPIC COMPONENT"
+      ],
+      "description": "Packed redstone dust that glows with latent energy.",
+      "obtain": "Combine 160 Redstone Dust in a 5x3 crafting grid.",
+      "category": "Materials",
+      "recipe": [
+        ["minecraft:redstone:32", "minecraft:redstone:32", "minecraft:redstone:32"],
+        ["minecraft:redstone:32", "minecraft:redstone:32", "minecraft:redstone:32"],
+        ["minecraft:redstone:32", "minecraft:redstone:32", "minecraft:redstone:32"],
+        ["minecraft:redstone:32", "minecraft:redstone:32", "minecraft:redstone:32"],
+        ["minecraft:redstone:32", "minecraft:redstone:32", "minecraft:redstone:32"]
+      ],
+      "outputCount": 32
+    },
+    {
+      "id": "enchanted_stick_iron",
+      "name": "\u00A7fEnchanted Iron Stick",
+      "material": "minecraft:stick",
+      "lore": [
+        "\u00A77Infused with iron and ancient sap.",
+        "\u00A7f\u00A7lCOMMON COMPONENT"
+      ],
+      "description": "Perfect handle material for basic weapons.",
+      "obtain": "Empower sticks with iron ingots and more sticks.",
+      "category": "Sticks",
+      "recipe": [
+        ["", "minecraft:stick", ""],
+        ["minecraft:stick", "minecraft:iron_ingot", "minecraft:stick"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "enchanted_stick_gold",
+      "name": "\u00A7eEnchanted Gold Stick",
+      "material": "minecraft:stick",
+      "lore": [
+        "\u00A77Infused with gold and ancient sap.",
+        "\u00A7e\u00A7lUNCOMMON COMPONENT"
+      ],
+      "description": "Perfect handle material for enhanced weapons.",
+      "obtain": "Empower sticks with gold ingots and more sticks.",
+      "category": "Sticks",
+      "recipe": [
+        ["", "minecraft:stick", ""],
+        ["minecraft:stick", "minecraft:gold_ingot", "minecraft:stick"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "enchanted_stick_lapis",
+      "name": "\u00A79Enchanted Lapis Stick",
+      "material": "minecraft:stick",
+      "lore": [
+        "\u00A77Infused with lapis and ancient sap.",
+        "\u00A79\u00A7lRARE COMPONENT"
+      ],
+      "description": "Perfect handle material for magical weapons.",
+      "obtain": "Empower sticks with lapis lazuli and more sticks.",
+      "category": "Sticks",
+      "recipe": [
+        ["", "minecraft:stick", ""],
+        ["minecraft:stick", "minecraft:lapis_lazuli", "minecraft:stick"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "enchanted_stick_redstone",
+      "name": "\u00A7cEnchanted Redstone Stick",
+      "material": "minecraft:stick",
+      "lore": [
+        "\u00A77Infused with redstone and ancient sap.",
+        "\u00A7c\u00A7lEPIC COMPONENT"
+      ],
+      "description": "Perfect handle material for epic weapons.",
+      "obtain": "Empower sticks with redstone dust and more sticks.",
+      "category": "Sticks",
+      "recipe": [
+        ["", "minecraft:stick", ""],
+        ["minecraft:stick", "minecraft:redstone", "minecraft:stick"],
+        ["", "minecraft:stick", ""]
+      ]
+    },
+    {
+      "id": "mage_chestplate",
+      "name": "\u00A7dMage Chestplate",
+      "material": "minecraft:diamond_chestplate",
+      "lore": [
+        "\u00A77Defense: \u00A7a+80, Mana: \u00A7b+150",
+        "\u00A7d\u00A7lMAGIC ARMOR"
+      ],
+      "description": "A chestplate that greatly boosts magical abilities.",
+      "obtain": "Craft with enchanted diamonds.",
+      "category": "Armor,Mage",
+      "recipe": [
+        ["enchanted_diamond", "", "enchanted_diamond"],
+        ["enchanted_diamond", "enchanted_diamond", "enchanted_diamond"],
+        ["enchanted_diamond", "enchanted_diamond", "enchanted_diamond"]
+      ]
+    },
+    {
+      "id": "zombie_brain",
+      "name": "\u00A72Zombie Brain",
+      "material": "minecraft:rotten_flesh",
+      "lore": [
+        "\u00A77Used in potions",
+        "\u00A72\u00A7lMOB DROP"
+      ],
+      "description": "A brain from a zombie.",
+      "obtain": "Dropped by zombies.",
+      "category": "MobDrops",
+      "recipe": []
+    },
+    {
+      "id": "skeleton_bone",
+      "name": "\u00A7fSkeleton Bone",
+      "material": "minecraft:bone",
+      "lore": [
+        "\u00A77Used in crafting",
+        "\u00A7f\u00A7lMOB DROP"
+      ],
+      "description": "A bone from a skeleton.",
+      "obtain": "Dropped by skeletons.",
+      "category": "MobDrops",
+      "recipe": []
+    },
+    {
+      "id": "creeper_gunpowder",
+      "name": "\u00A7cCreeper Gunpowder",
+      "material": "minecraft:gunpowder",
+      "lore": [
+        "\u00A77Explosive material",
+        "\u00A7c\u00A7lMOB DROP"
+      ],
+      "description": "Gunpowder from a creeper.",
+      "obtain": "Dropped by creepers.",
+      "category": "MobDrops",
+      "recipe": []
+    },
+    {
+      "id": "spider_silk",
+      "name": "\u00A78Spider Silk",
+      "material": "minecraft:string",
+      "lore": [
+        "\u00A77Used for crafting",
+        "\u00A78\u00A7lMOB DROP"
+      ],
+      "description": "Silk from a spider.",
+      "obtain": "Dropped by spiders.",
+      "category": "MobDrops",
+      "recipe": []
+    },
+    {
+      "id": "grindstone",
+      "name": "\u00A77Grindstone",
+      "material": "minecraft:grindstone",
+      "lore": [
+        "\u00A77Removes enchantments",
+        "\u00A77\u00A7lARTISAN TOOL"
+      ],
+      "description": "A tool for disenchanting.",
+      "obtain": "Craft with planks and stone.",
+      "category": "Artisan",
+      "recipe": [
+        ["minecraft:stick", "minecraft:stone", "minecraft:stick"],
+        ["minecraft:oak_planks", "minecraft:grindstone", "minecraft:oak_planks"],
+        ["minecraft:oak_planks", "minecraft:oak_planks", "minecraft:oak_planks"]
+      ]
+    },
+    {
+      "id": "loom",
+      "name": "\u00A77Loom",
+      "material": "minecraft:loom",
+      "lore": [
+        "\u00A77Creates banners",
+        "\u00A77\u00A7lARTISAN STATION"
+      ],
+      "description": "A station for weaving.",
+      "obtain": "Craft with planks and string.",
+      "category": "Artisan",
+      "recipe": [
+        ["minecraft:string", "minecraft:string", "minecraft:string"],
+        ["minecraft:oak_planks", "minecraft:oak_planks", "minecraft:oak_planks"],
+        ["minecraft:oak_planks", "", "minecraft:oak_planks"]
+      ]
+    },
+    {
+      "id": "barrier",
+      "name": "\u00A78Barrier",
+      "material": "minecraft:barrier",
+      "lore": [
+        "\u00A77Invisible block",
+        "\u00A78\u00A7lMISC"
+      ],
+      "description": "An invisible block used for building.",
+      "obtain": "Creative mode.",
+      "category": "Misc",
+      "recipe": []
+    },
+    {
+      "id": "book",
+      "name": "\u00A77Book",
+      "material": "minecraft:book",
+      "lore": [
+        "\u00A77Used for enchanting",
+        "\u00A77\u00A7lMISC"
+      ],
+      "description": "A book for writing.",
+      "obtain": "Craft with paper and leather.",
+      "category": "Misc",
+      "recipe": [
+        ["minecraft:paper", "minecraft:paper", "minecraft:paper"],
+        ["minecraft:paper", "minecraft:leather", "minecraft:paper"],
+        ["minecraft:paper", "minecraft:paper", "minecraft:paper"]
+      ]
+    },
+    {
+      "id": "clock",
+      "name": "\u00A7eClock",
+      "material": "minecraft:clock",
+      "lore": [
+        "\u00A77Tells time",
+        "\u00A7e\u00A7lMISC"
+      ],
+      "description": "A device to tell time.",
+      "obtain": "Craft with gold and redstone.",
+      "category": "Misc",
+      "recipe": [
+        ["", "minecraft:gold_ingot", ""],
+        ["minecraft:gold_ingot", "minecraft:redstone", "minecraft:gold_ingot"],
+        ["", "minecraft:gold_ingot", ""]
+      ]
+    },
+    {
+      "id": "compass",
+      "name": "\u00A7eCompass",
+      "material": "minecraft:compass",
+      "lore": [
+        "\u00A77Points north",
+        "\u00A7e\u00A7lMISC"
+      ],
+      "description": "A device to find direction.",
+      "obtain": "Craft with iron and redstone.",
+      "category": "Misc",
+      "recipe": [
+        ["", "minecraft:iron_ingot", ""],
+        ["minecraft:iron_ingot", "minecraft:redstone", "minecraft:iron_ingot"],
+        ["", "minecraft:iron_ingot", ""]
+      ]
+    },
+    {
+      "id": "map",
+      "name": "\u00A7eMap",
+      "material": "minecraft:map",
+      "lore": [
+        "\u00A77Shows terrain",
+        "\u00A7e\u00A7lMISC"
+      ],
+      "description": "A map of the world.",
+      "obtain": "Craft with paper and compass.",
+      "category": "Misc",
+      "recipe": [
+        ["minecraft:paper", "minecraft:paper", "minecraft:paper"],
+        ["minecraft:paper", "minecraft:compass", "minecraft:paper"],
+        ["minecraft:paper", "minecraft:paper", "minecraft:paper"]
+      ]
+    },
+    {
+      "id": "stone",
+      "name": "\u00A77Stone",
+      "material": "minecraft:stone",
+      "lore": [
+        "\u00A77Basic building block",
+        "\u00A77\u00A7lBLOCK"
+      ],
+      "description": "A common stone block.",
+      "obtain": "Mine stone.",
+      "category": "Blocks",
+      "recipe": []
+    },
+    {
+      "id": "dirt",
+      "name": "\u00A76Dirt",
+      "material": "minecraft:dirt",
+      "lore": [
+        "\u00A77Grows grass",
+        "\u00A76\u00A7lBLOCK"
+      ],
+      "description": "A block of dirt.",
+      "obtain": "Dig dirt.",
+      "category": "Blocks",
+      "recipe": []
+    },
+    {
+      "id": "cobblestone",
+      "name": "\u00A77Cobblestone",
+      "material": "minecraft:cobblestone",
+      "lore": [
+        "\u00A77From mining stone",
+        "\u00A77\u00A7lBLOCK"
+      ],
+      "description": "A rough stone block.",
+      "obtain": "Mine stone without silk touch.",
+      "category": "Blocks",
+      "recipe": []
+    },
+    {
+      "id": "wood_planks",
+      "name": "\u00A76Wood Planks",
+      "material": "minecraft:oak_planks",
+      "lore": [
+        "\u00A77From logs",
+        "\u00A76\u00A7lBLOCK"
+      ],
+      "description": "Planks from wood.",
+      "obtain": "Craft from logs.",
+      "category": "Blocks",
+      "recipe": [
+        ["minecraft:oak_log"]
+      ],
+      "outputCount": 4
+    },
+    {
+      "id": "sand",
+      "name": "\u00A7eSand",
+      "material": "minecraft:sand",
+      "lore": [
+        "\u00A77Makes glass",
+        "\u00A7e\u00A7lBLOCK"
+      ],
+      "description": "A block of sand.",
+      "obtain": "Dig sand.",
+      "category": "Blocks",
+      "recipe": []
+    },
+    {
+      "id": "potion_healing",
+      "name": "\u00A7cPotion of Healing",
+      "material": "minecraft:potion",
+      "lore": [
+        "\u00A77Restores health",
+        "\u00A7c\u00A7lPOTION"
+      ],
+      "description": "A potion that heals.",
+      "obtain": "Brew with nether wart and glistering melon.",
+      "category": "Potions",
+      "recipe": []
+    },
+    {
+      "id": "potion_strength",
+      "name": "\u00A7cPotion of Strength",
+      "material": "minecraft:potion",
+      "lore": [
+        "\u00A77Increases damage",
+        "\u00A7c\u00A7lPOTION"
+      ],
+      "description": "A potion that boosts strength.",
+      "obtain": "Brew with nether wart and blaze powder.",
+      "category": "Potions",
+      "recipe": []
+    },
+    {
+      "id": "potion_speed",
+      "name": "\u00A7bPotion of Speed",
+      "material": "minecraft:potion",
+      "lore": [
+        "\u00A77Increases speed",
+        "\u00A7b\u00A7lPOTION"
+      ],
+      "description": "A potion that boosts speed.",
+      "obtain": "Brew with nether wart and sugar.",
+      "category": "Potions",
+      "recipe": []
+    },
+    {
+      "id": "potion_regeneration",
+      "name": "\u00A7dPotion of Regeneration",
+      "material": "minecraft:potion",
+      "lore": [
+        "\u00A77Regenerates health",
+        "\u00A7d\u00A7lPOTION"
+      ],
+      "description": "A potion that regenerates health.",
+      "obtain": "Brew with nether wart and ghast tear.",
+      "category": "Potions",
+      "recipe": []
+    },
+    {
+      "id": "potion_invisibility",
+      "name": "\u00A78Potion of Invisibility",
+      "material": "minecraft:potion",
+      "lore": [
+        "\u00A77Makes invisible",
+        "\u00A78\u00A7lPOTION"
+      ],
+      "description": "A potion that makes you invisible.",
+      "obtain": "Brew with nether wart and fermented spider eye.",
+      "category": "Potions",
+      "recipe": []
+    },
+    {
+      "id": "enchanted_book_sharpness",
+      "name": "\u00A7aEnchanted Book (Sharpness)",
+      "material": "minecraft:enchanted_book",
+      "lore": [
+        "\u00A77Sharpness enchantment",
+        "\u00A7a\u00A7lENCHANTMENT"
+      ],
+      "description": "A book with sharpness enchantment.",
+      "obtain": "Enchant or trade.",
+      "category": "Enchantments",
+      "recipe": []
+    },
+    {
+      "id": "enchanted_book_protection",
+      "name": "\u00A7aEnchanted Book (Protection)",
+      "material": "minecraft:enchanted_book",
+      "lore": [
+        "\u00A77Protection enchantment",
+        "\u00A7a\u00A7lENCHANTMENT"
+      ],
+      "description": "A book with protection enchantment.",
+      "obtain": "Enchant or trade.",
+      "category": "Enchantments",
+      "recipe": []
+    },
+    {
+      "id": "enchanted_book_efficiency",
+      "name": "\u00A7aEnchanted Book (Efficiency)",
+      "material": "minecraft:enchanted_book",
+      "lore": [
+        "\u00A77Efficiency enchantment",
+        "\u00A7a\u00A7lENCHANTMENT"
+      ],
+      "description": "A book with efficiency enchantment.",
+      "obtain": "Enchant or trade.",
+      "category": "Enchantments",
+      "recipe": []
+    },
+    {
+      "id": "enchanted_book_unbreaking",
+      "name": "\u00A7aEnchanted Book (Unbreaking)",
+      "material": "minecraft:enchanted_book",
+      "lore": [
+        "\u00A77Unbreaking enchantment",
+        "\u00A7a\u00A7lENCHANTMENT"
+      ],
+      "description": "A book with unbreaking enchantment.",
+      "obtain": "Enchant or trade.",
+      "category": "Enchantments",
+      "recipe": []
+    },
+    {
+      "id": "enchanted_book_fortune",
+      "name": "\u00A7aEnchanted Book (Fortune)",
+      "material": "minecraft:enchanted_book",
+      "lore": [
+        "\u00A77Fortune enchantment",
+        "\u00A7a\u00A7lENCHANTMENT"
+      ],
+      "description": "A book with fortune enchantment.",
+      "obtain": "Enchant or trade.",
+      "category": "Enchantments",
+      "recipe": []
+    },
+    {
+      "id": "redstone_torch",
+      "name": "\u00A7cRedstone Torch",
+      "material": "minecraft:redstone_torch",
+      "lore": [
+        "\u00A77Provides power",
+        "\u00A7c\u00A7lREDSTONE"
+      ],
+      "description": "A torch that emits redstone power.",
+      "obtain": "Craft with redstone and stick.",
+      "category": "Redstone",
+      "recipe": [
+        ["minecraft:redstone"],
+        ["minecraft:stick"]
+      ]
+    },
+    {
+      "id": "redstone_repeater",
+      "name": "\u00A7cRedstone Repeater",
+      "material": "minecraft:repeater",
+      "lore": [
+        "\u00A77Delays signal",
+        "\u00A7c\u00A7lREDSTONE"
+      ],
+      "description": "A device to repeat and delay redstone signals.",
+      "obtain": "Craft with redstone, stone, and torches.",
+      "category": "Redstone",
+      "recipe": [
+        ["minecraft:redstone_torch", "minecraft:redstone", "minecraft:redstone_torch"],
+        ["minecraft:stone", "minecraft:stone", "minecraft:stone"]
+      ]
+    },
+    {
+      "id": "redstone_comparator",
+      "name": "\u00A7cRedstone Comparator",
+      "material": "minecraft:comparator",
+      "lore": [
+        "\u00A77Compares signals",
+        "\u00A7c\u00A7lREDSTONE"
+      ],
+      "description": "A device to compare redstone signals.",
+      "obtain": "Craft with redstone, quartz, and torches.",
+      "category": "Redstone",
+      "recipe": [
+        ["", "minecraft:redstone_torch", ""],
+        ["minecraft:redstone_torch", "minecraft:quartz", "minecraft:redstone_torch"],
+        ["minecraft:stone", "minecraft:stone", "minecraft:stone"]
+      ]
+    },
+    {
+      "id": "piston",
+      "name": "\u00A77Piston",
+      "material": "minecraft:piston",
+      "lore": [
+        "\u00A77Pushes blocks",
+        "\u00A77\u00A7lREDSTONE"
+      ],
+      "description": "A piston that pushes blocks.",
+      "obtain": "Craft with planks, cobblestone, iron, and redstone.",
+      "category": "Redstone",
+      "recipe": [
+        ["minecraft:oak_planks", "minecraft:oak_planks", "minecraft:oak_planks"],
+        ["minecraft:cobblestone", "minecraft:iron_ingot", "minecraft:cobblestone"],
+        ["minecraft:cobblestone", "minecraft:redstone", "minecraft:cobblestone"]
+      ]
+    },
+    {
+      "id": "lever",
+      "name": "\u00A77Lever",
+      "material": "minecraft:lever",
+      "lore": [
+        "\u00A77Toggles power",
+        "\u00A77\u00A7lREDSTONE"
+      ],
+      "description": "A switch for redstone.",
+      "obtain": "Craft with cobblestone and stick.",
+      "category": "Redstone",
+      "recipe": [
+        ["minecraft:stick"],
+        ["minecraft:cobblestone"]
+      ]
+    },
+    {
+      "id": "netherrack",
+      "name": "\u00A7cNetherrack",
+      "material": "minecraft:netherrack",
+      "lore": [
+        "\u00A77From the Nether",
+        "\u00A7c\u00A7lNETHER"
+      ],
+      "description": "A block from the Nether.",
+      "obtain": "Mine in Nether.",
+      "category": "Nether",
+      "recipe": []
+    },
+    {
+      "id": "soul_sand",
+      "name": "\u00A78Soul Sand",
+      "material": "minecraft:soul_sand",
+      "lore": [
+        "\u00A77Slows movement",
+        "\u00A78\u00A7lNETHER"
+      ],
+      "description": "Sand that slows entities.",
+      "obtain": "Mine in Nether.",
+      "category": "Nether",
+      "recipe": []
+    },
+    {
+      "id": "nether_bricks",
+      "name": "\u00A7cNether Bricks",
+      "material": "minecraft:nether_bricks",
+      "lore": [
+        "\u00A77Building block",
+        "\u00A7c\u00A7lNETHER"
+      ],
+      "description": "Bricks from the Nether.",
+      "obtain": "Craft from nether brick items.",
+      "category": "Nether",
+      "recipe": [
+        ["minecraft:nether_brick", "minecraft:nether_brick"],
+        ["minecraft:nether_brick", "minecraft:nether_brick"]
+      ]
+    },
+    {
+      "id": "glowstone",
+      "name": "\u00A7eGlowstone",
+      "material": "minecraft:glowstone",
+      "lore": [
+        "\u00A77Emits light",
+        "\u00A7e\u00A7lNETHER"
+      ],
+      "description": "A bright block from the Nether.",
+      "obtain": "Mine in Nether.",
+      "category": "Nether",
+      "recipe": []
+    },
+    {
+      "id": "magma_block",
+      "name": "\u00A7cMagma Block",
+      "material": "minecraft:magma_block",
+      "lore": [
+        "\u00A77Damages entities",
+        "\u00A7c\u00A7lNETHER"
+      ],
+      "description": "A hot block from the Nether.",
+      "obtain": "Mine in Nether.",
+      "category": "Nether",
+      "recipe": []
+    },
+    {
+      "id": "end_stone",
+      "name": "\u00A7eEnd Stone",
+      "material": "minecraft:end_stone",
+      "lore": [
+        "\u00A77From the End",
+        "\u00A7e\u00A7lEND"
+      ],
+      "description": "A block from the End.",
+      "obtain": "Mine in End.",
+      "category": "End",
+      "recipe": []
+    },
+    {
+      "id": "ender_pearl",
+      "name": "\u00A7dEnder Pearl",
+      "material": "minecraft:ender_pearl",
+      "lore": [
+        "\u00A77Teleports",
+        "\u00A7d\u00A7lEND"
+      ],
+      "description": "A pearl for teleporting.",
+      "obtain": "Dropped by endermen.",
+      "category": "End",
+      "recipe": []
+    },
+    {
+      "id": "end_crystal",
+      "name": "\u00A7dEnd Crystal",
+      "material": "minecraft:end_crystal",
+      "lore": [
+        "\u00A77Respawns dragon",
+        "\u00A7d\u00A7lEND"
+      ],
+      "description": "A crystal from the End.",
+      "obtain": "Craft with glass, eye of ender, and ghast tear.",
+      "category": "End",
+      "recipe": [
+        ["minecraft:glass", "minecraft:glass", "minecraft:glass"],
+        ["minecraft:glass", "minecraft:ender_eye", "minecraft:glass"],
+        ["minecraft:glass", "minecraft:ghast_tear", "minecraft:glass"]
+      ]
+    },
+    {
+      "id": "chorus_fruit",
+      "name": "\u00A7dChorus Fruit",
+      "material": "minecraft:chorus_fruit",
+      "lore": [
+        "\u00A77Teleports randomly",
+        "\u00A7d\u00A7lEND"
+      ],
+      "description": "A fruit that teleports.",
+      "obtain": "Grow on chorus plants.",
+      "category": "End",
+      "recipe": []
+    },
+    {
+      "id": "shulker_shell",
+      "name": "\u00A7dShulker Shell",
+      "material": "minecraft:shulker_shell",
+      "lore": [
+        "\u00A77For shulker boxes",
+        "\u00A7d\u00A7lEND"
+      ],
+      "description": "A shell from shulkers.",
+      "obtain": "Dropped by shulkers.",
+      "category": "End",
+      "recipe": []
+    }
+  ]
+}
+
+
+  
