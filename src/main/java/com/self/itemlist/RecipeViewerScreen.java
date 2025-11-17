@@ -152,7 +152,11 @@ public class RecipeViewerScreen extends Screen {
                         String countText = String.valueOf(stack.getCount());
                         int textX = slotX + 16 - this.textRenderer.getWidth(countText);
                         int textY = slotY + 9;
+                        // make sure the count renders above the item instead of beneath it
+                        context.getMatrices().push();
+                        context.getMatrices().translate(0.0f, 0.0f, 200.0f);
                         context.drawText(this.textRenderer, Text.literal(countText), textX, textY, 0xFFFFFF, false);
+                        context.getMatrices().pop();
                     }
                 }
             }
